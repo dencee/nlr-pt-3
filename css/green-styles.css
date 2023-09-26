@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+span {
+  color: green;
+}
+
+.card {
+  width: 400px;
+  margin: 20px;
+}
+
+.btn {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+}
