@@ -14,6 +14,8 @@ classInfo.push({ name: 'James Richardson',  fanPageUrl: "https://jamesdrichardso
 classInfo.push({ name: 'Eimile Davis',      fanPageUrl: "https://eimiled.github.io/fan-page/" });
 classInfo.push({ name: 'Berenice Borbon',   fanPageUrl: "https://bborbon.github.io/fan-page/" });
 classInfo.push({ name: 'Dalton Cavaness',   fanPageUrl: "https://dallyworld.github.io/fan-page/" });
+classInfo.push({ name: 'Joseph Tayag',      fanPageUrl: "https://jtayag1216.github.io/fan-page/" });
+
 
 window.addEventListener('DOMContentLoaded', event => {
 
