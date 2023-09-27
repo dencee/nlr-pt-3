@@ -15,7 +15,9 @@ classInfo.push({ name: 'Eimile Davis',      fanPageUrl: "https://eimiled.github.
 classInfo.push({ name: 'Berenice Borbon',   fanPageUrl: "https://bborbon.github.io/fan-page/" });
 classInfo.push({ name: 'Dalton Cavaness',   fanPageUrl: "https://dallyworld.github.io/fan-page/" });
 classInfo.push({ name: 'Joseph Tayag',      fanPageUrl: "https://jtayag1216.github.io/fan-page/" });
-
+classInfo.push({ name: 'Samuel Afewerki',   fanPageUrl: "https://samuelafewerki.github.io/fan-page/" });
+classInfo.push({ name: 'Edgar Vargas',      fanPageUrl: "https://edgar-vargas.github.io/fanpage/" });
+classInfo.push({ name: 'Kaitlyn Arick',     fanPageUrl: "https://arick-kaitlyn.github.io/TE-Fan-Page/" });
 
 window.addEventListener('DOMContentLoaded', event => {
 
