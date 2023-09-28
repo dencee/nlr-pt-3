@@ -16,6 +16,7 @@ classInfo.push({ name: 'Emmy Curry', fanPageUrl: 'https://emmycurry.github.io/fa
 classInfo.push({ name: 'Daniel Lopez', fanPageUrl: 'https://dubdayn.github.io/lucy-fanPage/' });
 classInfo.push({ name: 'Stephanie Strano', fanPageUrl: 'https://stephnicoledev.github.io/fan-page/' });
 classInfo.push({ name: 'Ash Sherlin', fanPageUrl: 'https://ashsherlin.github.io/eevee-hw/' });
+classInfo.push({ name: 'Melanie Jellison', fanPageUrl: 'https://craftyworm.github.io/fan-page/' });
 
 
 window.addEventListener('DOMContentLoaded', event => {
