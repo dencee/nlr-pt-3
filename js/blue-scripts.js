@@ -5,7 +5,8 @@ const classInfo = [];
 /*
  * Add fan pages below
  */
-classInfo.push({ name: 'A. Developer', fanPageUrl: "https://en.wikipedia.org/wiki/Blue" });
+classInfo.push({ name: 'Hannah Schomaker', fanPageUrl: "https://schomakerh14.github.io/schomakerh14.github.io-marceline-fan-page/" });
+
 
 window.addEventListener('DOMContentLoaded', event => {
 
