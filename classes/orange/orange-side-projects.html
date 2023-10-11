@@ -5,11 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLR-PT-3 Orange Class</title>
+    <link rel="stylesheet" href="../../css/orange-styles.css">
+    <script type="module" src="../../js/orange-scripts.js"></script>
 </head>
 <body>
     <main>
-        <section class = "side-projects">
+        <section id = "navbar">
+            <nav>
+              <ul id = "navbar-items">
+                <li><a href="orange.html">Home</a></li>
+                <li><a href="orange-fan-pages.html">Orange Fan Pages</a></li>
+                <li><a href="orange-portfolios.html">Orange Portfolios</a></li>
+                <li><a href="orange-side-projects.html">Orange Side Projects</a></li>
+              </ul>
+            </nav>
+          </section>
 
+        <h2>NLR-PT-3 <span>Orange</span> Portfolios</h2>
+
+        <section class = "side-project-cards">
+            <template id="side-project-card-template">
+                <article class="side-project card">
+                    <h5 class="card-header">Placeholder Name</h5>
+                    <iframe src="" width="400" height="400" frameborder="0" marginheight="0" marginwidth="0"
+                        scrolling="no" class="card-body"></iframe>
+                    <button class="side-project-button btn btn-primary">Click</button>
+                </article>
+            </template>
         </section>
     </main>
 </body>
