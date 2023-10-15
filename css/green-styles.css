@@ -2,17 +2,80 @@
   box-sizing: border-box;
 }
 
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
 span {
   color: green;
 }
 
+header > a {
+  text-decoration: none;
+  color: #fff;
+  background-color:rgb(129, 127, 127);
+  padding: 16px;
+  border-radius: 7px;
+}
+
+#subtitle {
+  text-align: center;
+}
+
+.fan-page-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
 .card {
-  width: 400px;
+  display: flex;
+  flex-direction: column;
   margin: 20px;
+  padding: 10px;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 .btn {
   width: 50%;
-  margin: auto;
-  margin-bottom: 10px;
+  margin: 20px auto 0 auto;
+  text-decoration: none;
+  color: #fff;
+  background-color:rgb(129, 127, 127);
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width: 630px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header > a {
+   font-size: 12px;
+   font-weight: 700;
+  }
 }
