@@ -1,20 +1,20 @@
-//const USER_API_URL = "https://api.github.com/users/";
-const USER_API_URL = 'http://www.localhost:8080/api';
+const USER_API_URL = "https://api.github.com/users/";
+//const USER_API_URL = 'http://www.localhost:8080/api';
 
 // Array of all students
-// const studentList = [
-//   "sth84478",
-//   "stevegreen4",
-//   "thepudgypigeon",
-//   "jrhurleycode",
-//   "joelrennert",
-//   "jasondscott90",
-//   "heid9107",
-//   "emmycurry",
-//   "dubdayn",
-//   "stephnicoledev",
-//   "ashsherlin",
-// ];
+const studentList = [
+  "sth84478",
+  "stevegreen4",
+  "thepudgypigeon",
+  "jrhurleycode",
+  "joelrennert",
+  "jasondscott90",
+  "heid9107",
+  "emmycurry",
+  "dubdayn",
+  "stephnicoledev",
+  "ashsherlin",
+];
 
  
 /**
@@ -27,7 +27,7 @@ function createUserCard(user) {
   // no avatar, name endpoint yet
   const cardHTML = `
         <div class="card">
-            <div class = "user-info" id='${user.id}'>
+            <div class = "user-info" id='${user.login}'>
                 <img src = "${user.avatar_url}" alt = "${user.name}" class="user-img" />
                 <h3 class="username">${user.name}</h3>
                 <p class="bio">bio here</p> 
@@ -75,14 +75,14 @@ async function createClickedCard(user) {
   cardElement.innerHTML = cardHTML;
 
   // Get the .selected-card container and append the new card to it
-  const bodyElement = document.querySelector('body');
-  const cartContainer = document.createElement("div");
-  cartContainer.classList.add('selected-card');
-  bodyElement.appendChild(cartContainer);
+  // const bodyElement = document.querySelector('body');
+  // const cartContainer = document.createElement("div");
+  // cartContainer.classList.add('selected-card');
+  // bodyElement.appendChild(cartContainer);
 
 
-  // const selectedProfileContainer = document.querySelector(".selected-card");
-  // selectedProfileContainer.appendChild(cardElement);
+  const selectedProfileContainer = document.querySelector(".selected-card");
+  selectedProfileContainer.appendChild(cardElement);
 }
 
 // Track the currently selected card that is displayed
