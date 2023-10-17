@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaGreen Student Form</title>
-    <link rel="stylesheet" href="/css/green-styles.css" />
-    <link rel="stylesheet" href="/css/fan-form/styles.css" />
+    <!-- <link rel="stylesheet" href="/css/green-styles.css" /> -->
+    <link rel="stylesheet" href="/nlr-pt-3/css/fan-form/fan-form-styles.css" />
   </head>
   <body>
     <header>
@@ -20,56 +20,48 @@
 
     <form id="loginForm">
       <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required /><br /><br />
+      <input type="text" id="username" name="username" required/>
 
       <label for="password">Password:</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        required
-      /><br /><br />
+      <input type="password" id="password" name="password" required/>
+      
+      <br />
 
       <input type="submit" value="Submit" />
+      <br><br>
+
     </form>
+    <br />
 
     <form id="studentForm" class="hidden">
-      <label for="fan-page-title">Fan Page Title:</label>
-      <input
-        type="text"
-        id="fan-page-title"
-        name="fan-page-title"
-      /><br /><br />
 
-      <label for="fan-page-url">Fan Page url:</label>
-      <input type="url" id="fan-page-url" name="fan-page-url" /><br /><br />
+      <label for="fan-page-title">Fan Page Title: </label>
+      <input type="text" id="fan-page-title" name="fan-page-title"><br><br>
 
-      <label for="fan-page-description">Fan Page Description:</label>
-      <input
-        type="text"
-        id="fan-page-description"
-        name="fan-page-description"
-      /><br /><br />
-      <br /><br />
-      <label for="portfolio-url">Portfolio-url:</label>
-      <input type="url" id="portfolio-url" name="portfolio-url" /><br /><br />
-      <br /><br />
+      <label for="fan-page-url">Fan Page url: </label>
+      <input type="url" id="fan-page-url" name="fan-page-url" ><br><br>
 
-      <label for="project-name">Project Name:</label>
-      <input type="text" id="project-name" name="project-name" /><br /><br />
+      <label for="fan-page-description">Fan Page Description: </label>
+      <input type="text" id="fan-page-description" name="fan-page-description" ><br><br>
 
-      <label for="project-url">Project-url:</label>
-      <input type="url" id="project-url" name="project-url" /><br /><br />
+      <label for="portfolio-url">Portfolio-url: </label>
+      <input type="url" id="portfolio-url" name="portfolio-url" ><br><br>
+    
 
-      <label for="project-description">Project Description:</label>
-      <input
-        type="text"
-        id="project-description"
-        name="project-description"
-      /><br /><br />
+      <label for="project-name">Project Name: </label>
+      <input type="text" id="project-name" name="project-name"><br><br>
 
-      <input type="submit" value="Submit" />
+      <label for="project-url">Project-url: </label>
+      <input type="url" id="project-url" name="project-url" ><br><br>
+
+      <label for="project-description">Project Description: </label>
+      <input type="text" id="project-description" name="project-description"><br><br>
+
+      <input type="submit" value="Submit" ><br><br>
     </form>
+
     <script src="/js/fan-form/scripts.js" defer></script>
+
   </body>
+
 </html>

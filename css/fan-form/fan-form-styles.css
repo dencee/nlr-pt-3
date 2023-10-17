@@ -1,0 +1,42 @@
+
+b .hidden {
+  display: none;
+}
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+/* Please Log in  */
+h1{
+  display: grid;
+  justify-content: center;
+}
+
+
+/* Nav to Home Page */
+li {
+  display: grid;
+  justify-content: left;
+}
+
+#loginForm{
+  display: grid;
+  justify-content: left;
+}
+
+/* 
+Username & Password */
+#studentForm {
+  display: table;
+  background: #eee;
+}
+
+#fan-page-description {
+padding: 50px;  
+text-align:initial;
+}
+#project-description{
+  padding: 50px;
+}
