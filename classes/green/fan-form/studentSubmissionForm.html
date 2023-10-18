@@ -9,18 +9,21 @@
     <link rel="stylesheet" href="/nlr-pt-3/css/fan-form/fan-form-styles.css" />
   </head>
   <body>
+    <main id='grid-container'>
     <header>
-      <h1 id="headerText">Please log in</h1>
+      <h1>Java Green!</h1>
       <nav>
         <ul>
-          <li><a href="green.html">Green Home Page</a></li>
+          <li><a href="green.html">Back to Java Green Home</a></li>
         </ul>
       </nav>
     </header>
 
     <form id="loginForm">
+      <h2 id="login-header">Please log in</h2>
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required/>
+      <br>
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required/>
@@ -32,9 +35,9 @@
 
     </form>
     <br />
-
+ 
     <form id="studentForm" class="hidden">
-
+      <h2 id="fan-page-header">Fan Page Submission</h2>
       <label for="fan-page-title">Fan Page Title: </label>
       <input type="text" id="fan-page-title" name="fan-page-title"><br><br>
 
@@ -42,8 +45,8 @@
       <input type="url" id="fan-page-url" name="fan-page-url" ><br><br>
 
       <label for="fan-page-description">Fan Page Description: </label>
-      <input type="text" id="fan-page-description" name="fan-page-description" ><br><br>
-
+      <input type="textarea" id="fan-page-description"  wrap="soft" name="fan-page-description" ><br><br>
+      <h2 id="portfolio-header"> Portfolio Submission</h2>
       <label for="portfolio-url">Portfolio-url: </label>
       <input type="url" id="portfolio-url" name="portfolio-url" ><br><br>
     
@@ -55,13 +58,13 @@
       <input type="url" id="project-url" name="project-url" ><br><br>
 
       <label for="project-description">Project Description: </label>
-      <input type="text" id="project-description" name="project-description"><br><br>
+      <input type="textarea" id="project-description" name="project-description"><br><br>
 
       <input type="submit" value="Submit" ><br><br>
     </form>
 
     <script src="/js/fan-form/scripts.js" defer></script>
-
+  </main>
   </body>
 
 </html>
