@@ -74,13 +74,6 @@ async function createClickedCard(user) {
   const cardElement = document.createElement("div");
   cardElement.innerHTML = cardHTML;
 
-  // Get the .selected-card container and append the new card to it
-  // const bodyElement = document.querySelector('body');
-  // const cartContainer = document.createElement("div");
-  // cartContainer.classList.add('selected-card');
-  // bodyElement.appendChild(cartContainer);
-
-
   const selectedProfileContainer = document.querySelector(".selected-card");
   selectedProfileContainer.appendChild(cardElement);
 }
@@ -114,4 +107,9 @@ studentList.forEach(async (studentUsername) => {
     // Update the currently selected card
     currentSelectedCard = selectedInfoElement;
   });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  createClickedCard;
 });
