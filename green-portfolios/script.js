@@ -78,6 +78,7 @@ async function createClickedCard(user) {
   // cartContainer.classList.add('selected-card');
   // bodyElement.appendChild(cartContainer);
 
+
   const selectedProfileContainer = document.querySelector(".selected-card");
   selectedProfileContainer.appendChild(cardElement);
 }
@@ -115,4 +116,9 @@ document.addEventListener("DOMContentLoaded", () => {
       currentSelectedCard = selectedInfoElement;
     });
   });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  createClickedCard;
 });
