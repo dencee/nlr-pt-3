@@ -116,9 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
       currentSelectedCard = selectedInfoElement;
     });
   });
+  createClickedCard();
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  createClickedCard;
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   createClickedCard;
+// });
