@@ -16,14 +16,12 @@ const studentList = [
   "ashsherlin",
 ];
 
- 
 /**
  * Creates a small card for each student with basic information
  * @param {String} user
  */
 
 function createUserCard(user) {
-
   // no avatar, name endpoint yet
   const cardHTML = `
         <div class="card">
@@ -80,7 +78,6 @@ async function createClickedCard(user) {
   // cartContainer.classList.add('selected-card');
   // bodyElement.appendChild(cartContainer);
 
-
   const selectedProfileContainer = document.querySelector(".selected-card");
   selectedProfileContainer.appendChild(cardElement);
 }
@@ -88,30 +85,34 @@ async function createClickedCard(user) {
 // Track the currently selected card that is displayed
 let currentSelectedCard = null;
 
-// Create .user-info cards and their corresponding .selected-info cards
-studentList.forEach(async (studentUsername) => {
-  // Fetch the user data
-  const userResp = await fetch(USER_API_URL + studentUsername);
-  const userData = await userResp.json();
+document.addEventListener("DOMContentLoaded", () => {
+  // Create .user-info cards and their corresponding .selected-info cards
+  studentList.forEach(async (studentUsername) => {
+    // Fetch the user data
+    const userResp = await fetch(USER_API_URL + studentUsername);
+    const userData = await userResp.json();
 
-  createUserCard(userData);
-  createClickedCard(userData);
+    createUserCard(userData);
+    createClickedCard(userData);
 
-  // Attach a click event listener to the user card
-  const userCard = document.querySelector(`.user-info[id="${userData.login}"]`);
-  userCard.addEventListener("click", () => {
-    // Find the selected-info element based on the user's login
-    const selectedInfoElement = document.getElementById(userData.login);
+    // Attach a click event listener to the user card
+    const userCard = document.querySelector(
+      `.user-info[id="${userData.login}"]`
+    );
+    userCard.addEventListener("click", () => {
+      // Find the selected-info element based on the user's login
+      const selectedInfoElement = document.getElementById(userData.login);
 
-    // If there's a currently selected card, hide it
-    if (currentSelectedCard) {
-      currentSelectedCard.hidden = true;
-    }
+      // If there's a currently selected card, hide it
+      if (currentSelectedCard) {
+        currentSelectedCard.hidden = true;
+      }
 
-    // Show the selected card
-    selectedInfoElement.hidden = false;
+      // Show the selected card
+      selectedInfoElement.hidden = false;
 
-    // Update the currently selected card
-    currentSelectedCard = selectedInfoElement;
+      // Update the currently selected card
+      currentSelectedCard = selectedInfoElement;
+    });
   });
 });
