@@ -3,7 +3,7 @@ import {
   deleteProject,
   makeRequest,
   updateProject,
-} from "../../requests/requests.js";
+} from "../requests/requests.js";
 const USERNAME = "student";
 const PASSWORD = "sausages";
 let selected = null;
@@ -204,7 +204,8 @@ function loadProject(data) {
 
   const button = document.getElementById("project-submit");
   button.textContent = data == null ? "Add" : "Update";
-  data == null || setSubmitButton(button, false);
+  if (data == null) button.disabled = false;
+  else setSubmitButton(button, false);
 
   document.getElementById("project-name").value = data?.name ?? "";
   document.getElementById("project-url").value = data?.url ?? "";
@@ -253,7 +254,7 @@ function createProjectButton(container, data) {
       loadExistingData();
     });
     const icon = deleteButton.appendChild(document.createElement("img"));
-    icon.src = "../icon/delete.svg";
+    icon.src = "./icon/delete.svg";
   }
 
   if (data?.id === selected) {

@@ -1,4 +1,4 @@
-import { getUserByUUID, setPassword } from "../../requests/requests.js";
+import { getUserByUUID, setPassword } from "../requests/requests.js";
 
 let user;
 
