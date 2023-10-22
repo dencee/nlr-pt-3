@@ -5,66 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaGreen Student Form</title>
-    <!-- <link rel="stylesheet" href="/css/green-styles.css" /> -->
-    <link rel="stylesheet" href="/nlr-pt-3/css/fan-form/fan-form-styles.css" />
+    <link rel="stylesheet" href="styles/fan-form-styles.css" />
   </head>
   <body>
-    <main id='grid-container'>
-    <header>
-      <h1>Java Green!</h1>
-      <nav>
-        <ul>
-          <li><a href="green.html">Back to Java Green Home</a></li>
-        </ul>
-      </nav>
-    </header>
+    <main id="grid-container">
+      <div id="loginFormWrapper">
+        <form id="loginForm">
+          <h2 id="login-header">Please log in</h2>
+          <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
 
-    <form id="loginForm">
-      <h2 id="login-header">Please log in</h2>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required/>
-      <br>
+          <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required/>
-      
-      <br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
 
-      <input type="submit" value="Submit" />
-      <br><br>
+      <div id="editWrapper">
+        <header>
+          <h1>Welcome <span id="welcome-user"></span></h1>
+          <p>Show off what you've made!</p>
+        </header>
+        <form id="studentForm">
+          <div>
+            <h2 id="fan-page-header">Fan Page</h2>
+            <div class="input-pair">
+              <label for="fan-page-url">Url:</label>
+              <input type="url" id="fan-page-url" name="fan-page-url" />
+            </div>
 
-    </form>
-    <br />
- 
-    <form id="studentForm" class="hidden">
-      <h2 id="fan-page-header">Fan Page Submission</h2>
-      <label for="fan-page-title">Fan Page Title: </label>
-      <input type="text" id="fan-page-title" name="fan-page-title"><br><br>
+            <div class="input-pair">
+              <label for="fan-page-title">Title:</label>
+              <input type="text" id="fan-page-title" name="fan-page-title" />
+            </div>
 
-      <label for="fan-page-url">Fan Page url: </label>
-      <input type="url" id="fan-page-url" name="fan-page-url" ><br><br>
+            <div class="input-pair">
+              <label for="fan-page-description">Description:</label>
+              <textarea
+                id="fan-page-description"
+                name="fan-page-description"
+                rows="4"
+              ></textarea>
+            </div>
+          </div>
+          <div id="right-panel">
+            <div>
+              <h2 id="github-header">Github</h2>
+              <div>
+                <label for="github-url">Url:</label>
+                <input type="url" id="github-url" name="github-url" />
+              </div>
+            </div>
+            <button type="submit" id="student-submit" disabled>Saved</button>
+          </div>
+        </form>
+        <section id="projects-section">
+          <h2>Projects</h2>
+          <div>
+            <aside id="project-menu"></aside>
+            <div id="project-form-wrapper" class="hidden">
+              <form id="project-form" class="hidden">
+                <div>
+                  <label for="project-name">Name:</label>
+                  <input type="text" id="project-name" name="project-name" />
+                </div>
 
-      <label for="fan-page-description">Fan Page Description: </label>
-      <input type="textarea" id="fan-page-description"  wrap="soft" name="fan-page-description" ><br><br>
-      <h2 id="portfolio-header"> Portfolio Submission</h2>
-      <label for="portfolio-url">Portfolio-url: </label>
-      <input type="url" id="portfolio-url" name="portfolio-url" ><br><br>
-    
+                <div>
+                  <label for="project-url">Url:</label>
+                  <input type="url" id="project-url" name="project-url" />
+                </div>
 
-      <label for="project-name">Project Name: </label>
-      <input type="text" id="project-name" name="project-name"><br><br>
+                <div>
+                  <label for="project-description">Description:</label>
+                  <textarea
+                    id="project-description"
+                    name="project-description"
+                    rows="5"
+                  ></textarea>
+                </div>
 
-      <label for="project-url">Project-url: </label>
-      <input type="url" id="project-url" name="project-url" ><br><br>
+                <button type="submit" id="project-submit"></button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
 
-      <label for="project-description">Project Description: </label>
-      <input type="textarea" id="project-description" name="project-description"><br><br>
-
-      <input type="submit" value="Submit" ><br><br>
-    </form>
-
-    <script src="/js/fan-form/scripts.js" defer></script>
-  </main>
+      <script type="module" src="scripts/studentSubmissionForm.js"></script>
+    </main>
   </body>
-
 </html>
