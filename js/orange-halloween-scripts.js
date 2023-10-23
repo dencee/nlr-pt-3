@@ -1,6 +1,5 @@
 import { createFanPages } from './scripts.js'
 
-const studentCards = document.querySelector('.fan-page-card')
 const classInfo = [];
 
 classInfo.push({ name: 'Angela Wang',       fanPageUrl: "https://angelaw1618.github.io/fan-page/" });
@@ -26,12 +25,14 @@ window.addEventListener('DOMContentLoaded', event => {
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            entry.target.classList.toggle(" show", entry.isIntersecting)
+            entry.target.classList.toggle("show", entry.isIntersecting)
         })
         }, {
-            rootMargin: "-100px",
+            threshold: 1,
         }
     )
+    const studentCards = document.querySelectorAll('.fan-site.card')
+
     studentCards.forEach(studentCards =>{
         observer.observe(studentCards);
     })
