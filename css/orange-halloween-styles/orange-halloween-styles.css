@@ -7,37 +7,57 @@ body{
 }
 
 main{
-    margin-top: 200px;
+    margin-top: 175px;
 }
 
 header{
+    display: grid;
+    flex-direction: column;
     background-color: #F4B059;
     top: 0;
     position: fixed;
     width: 100%;
-    height: 150;
+    height: 175px;
 }
 
-header>h1{
+/* header>h1{
     text-align: center;
+} */
+
+header#logo{
+    justify-content: center;
 }
 
-header>img{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+#logo {
+    width: 300px;
+    align-items: baseline;
+    justify-self: center;
 }
-
+#nav-bar {
+    background-color: #F4B059;
+    height: 35px;
+}
 ul{
     display: flex;
     list-style-type: none;
     justify-content: end;
+    height: 22px;
 }
+.page-title{
+    background-color: #9b9b9A;
 
+}
+h2{
+    text-align: center;
+    color: hsl(277, 37%, 65%);
+
+    text-shadow: 0px 0px 15px black;
+
+}
 .nav-link{
     color: black;
     text-decoration: none;
-    margin: 20px;
+    margin: 10px;
 }
 
 
