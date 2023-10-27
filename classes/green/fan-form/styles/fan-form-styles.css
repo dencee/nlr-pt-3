@@ -1,0 +1,242 @@
+:root {
+  --primary-color: #4caf50;
+  --primary-color-highlight: #3e9142;
+
+  --primary-font-contrast-color: white;
+
+  --border-color: #ccc;
+
+  --error: red;
+  --disabled: grey;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  text-align: center;
+  margin-right: 20px;
+}
+
+#loginForm {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+#passwordForm {
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.welcome {
+  margin-top: 50px;
+}
+
+.welcome h2 {
+  text-align: center;
+}
+
+#studentForm {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  gap: 50px;
+}
+
+#studentForm > div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 20px;
+}
+
+#right-panel {
+  display: flex;
+  justify-content: space-between;
+}
+
+#student-submit {
+  align-self: flex-end;
+  justify-self: end;
+}
+
+#right-panel > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#projects-section {
+  margin-top: 50px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#projects-section h2 {
+  margin-bottom: 20px;
+}
+
+#projects-section > div {
+  display: flex;
+  gap: 50px;
+}
+
+#projects-section > div > * {
+  width: 300px;
+}
+
+#project-menu {
+  height: 354px;
+  border: 1px solid var(--border-color);
+}
+
+#project-menu > div {
+  position: relative;
+}
+
+.button-reset {
+  all: unset;
+  box-sizing: border-box;
+}
+
+.project-button {
+  width: 100%;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.project-button:hover {
+  background: var(--primary-color-highlight);
+  color: var(--primary-font-contrast-color);
+}
+
+.project-button:where(.selected) {
+  background: var(--primary-color);
+  color: var(--primary-font-contrast-color);
+}
+
+.delete-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  aspect-ratio: 1/1;
+  height: 100%;
+  cursor: pointer;
+}
+
+.delete-button:hover img {
+  filter: invert(46%) sepia(44%) saturate(570%) hue-rotate(73deg)
+    brightness(94%) contrast(94%);
+}
+
+.project-button:hover + .delete-button {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(157deg)
+    brightness(113%) contrast(101%);
+}
+
+#project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  resize: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.8rem;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--primary-font-contrast-color);
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  background: var(--disabled);
+  cursor: auto;
+}
+
+button[type="submit"]:not([disabled]):hover {
+  background-color: var(--primary-color-highlight);
+}
+
+#form-error {
+  color: var(--error);
+  height: 2rem;
+}
+
+#already-set {
+  margin-top: 100px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}

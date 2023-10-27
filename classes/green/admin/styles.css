@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+#content-wrapper > * {
+  height: 100vh;
+}
+
+#nav-bar ul {
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-bar li {
+  list-style: none;
+  padding-block: 10px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#nav-bar li:hover {
+  background: rgb(233, 233, 233);
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-bar li.selected {
+  background: rgb(199, 199, 199);
+}
+
+#work-area {
+  padding-block: 10px;
+  padding-inline: 20px;
+}
+
+table :is(th, td) {
+  padding: 4px;
+}
+
+.edit-button {
+  padding-inline: 2px;
+}
+
+.type-string {
+  text-align: left;
+}
+
+.type-number {
+  text-align: right;
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  overflow: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+}
+
+.modal-content--header {
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+  height: 16px;
+}
