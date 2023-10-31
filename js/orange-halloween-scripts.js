@@ -20,21 +20,42 @@ classInfo.push({ name: 'Edgar Vargas',      fanPageUrl: "https://edgar-vargas.gi
 classInfo.push({ name: 'Kaitlyn Arick',     fanPageUrl: "https://arick-kaitlyn.github.io/TE-Fan-Page/" });
 
 window.addEventListener('DOMContentLoaded', event => {
-
     createFanPages(classInfo);
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            entry.target.classList.toggle("show", entry.isIntersecting)
-        })
-        }, {
-            threshold: 1,
-        }
-    )
-    const studentCards = document.querySelectorAll('.fan-site.card')
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show");
+            }
+        });
+    }, {
+        threshold: 0.5,
+    });
 
-    studentCards.forEach(studentCards =>{
-        observer.observe(studentCards);
-    })
+    const fanSiteCards = document.querySelectorAll('.fan-page-cards .fan-site.card');
+
+    fanSiteCards.forEach(card => {
+        observer.observe(card);
+    });
+});
+let foreground = document.getElementById('foreground');
+let foreground2 = document.getElementById('foreground2')
+let moon = document.getElementById('moon');
+let scaryTree = document.getElementById('scary-tree');
+let treeTwo = document.getElementById('scary-tree2');
+let house = document.getElementById('house');
+let stars = document.getElementById('stars');
+
+window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    foreground.style.left = value * 0.08 + 'px';
+    moon.style.top = value * 0.35 + 'px'
+    scaryTree.style.left = value * 0.15 + 'px';
+    treeTwo.style.left = value * 0.05 + 'px';
+    foreground2.style.right = value * -0.25 + 'px';
+    house.style.scale = value * 0.25 + 'px';
+    stars.style.top = value * -0.15 + 'px';
 });
 
