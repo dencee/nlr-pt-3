@@ -86,10 +86,6 @@ header ul li{
     background: #f4b059;
 }
 
-.page-title{
-    color: #ae85c7;
-}
-
 #parallax-images{
     position: relative;
     width: 100%;
@@ -113,6 +109,8 @@ header ul li{
     opacity: .95;
     transform: translate(-17vw, 35vh);
     bottom: 0;
+    filter: hue-rotate(150deg);
+    filter: sepia(90%);
 }
 
 #parallax-images > img#scary-tree2{
@@ -120,6 +118,8 @@ header ul li{
     height: 90vh;
     max-width: 100%;
     opacity: .95;
+    filter: hue-rotate(190deg);
+    filter: sepia(100%);
 }
 
 #moon{
@@ -129,6 +129,7 @@ header ul li{
     max-width: 100%;
     z-index: -90;
     transform: translate(40vw);
+    filter: blur(2px);
 }
 
 #parallax-images > img#stars{
@@ -145,6 +146,7 @@ header ul li{
     height: 106%;
     max-width: 100%;
     opacity: .90;
+    filter: sepia(20%);
 }
 
 #parallax-images > img#foreground{
@@ -156,7 +158,6 @@ header ul li{
     width: 102vw;
     z-index: 9;
     bottom: 0;
-    background-repeat: repeat-y;
 }
 
 #parallax-images > img#foreground2{
@@ -167,7 +168,20 @@ header ul li{
     width: 102vw;
     z-index: 9;
     bottom: 0;
-    background-repeat: repeat-y;
+}
+
+main{
+    height: 780px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#separator{
+    height: 30vh;
+    background: linear-gradient(black, #eb8a41, transparent);
+    width: 100%;
 }
 
 .fan-page-cards{
@@ -202,6 +216,7 @@ header ul li{
 .page-title{
     text-align: center;
     font-size: xx-large;
+    color: #555555;
 }
 
 article{
@@ -209,8 +224,6 @@ article{
     flex-basis: 400px;
 }
 
-.show {
-    opacity: 1;
-    transition: opacity 0.3s ease; 
+.hidden{
+    display: none;
 }
-

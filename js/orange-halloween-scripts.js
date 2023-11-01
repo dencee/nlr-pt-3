@@ -40,6 +40,7 @@ window.addEventListener('DOMContentLoaded', event => {
         observer.observe(card);
     });
 });
+
 let foreground = document.getElementById('foreground');
 let foreground2 = document.getElementById('foreground2')
 let moon = document.getElementById('moon');
@@ -51,11 +52,12 @@ let stars = document.getElementById('stars');
 window.addEventListener('scroll', function(){
     let value = window.scrollY;
     foreground.style.left = value * 0.08 + 'px';
-    moon.style.top = value * 0.35 + 'px'
+    moon.style.top = value * 0.45 + 'px';
+    moon.style.left = value * -0.15 + 'px';
     scaryTree.style.left = value * 0.15 + 'px';
     treeTwo.style.left = value * 0.05 + 'px';
-    foreground2.style.right = value * -0.25 + 'px';
-    house.style.scale = value * 0.25 + 'px';
+    foreground2.style.left = value * -0.05 + 'px';
+    house.style.left = value * -0.07 + 'px';
     stars.style.top = value * -0.15 + 'px';
 });
 
